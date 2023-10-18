@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- // meta tag -->
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+      name="viewport"
+    />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <meta
+      name="description"
+      content="Attendence: Study Materials · Sem 03 · Time Table · Faculity Details · Attendence Check  ..."
+    />
+    <meta
+      name="keywords"
+      content="srm U1 section,anujrishu.live, anujrishu, anuj rishu, U1 time table, time table U1,anujtiwari,U1 section by anujrishu,anujrishutiwari"
+    />
+    <meta name="author" content="Anuj Rishu Tiwari" />
+    <meta name="copyright" content="Copyright © 2023  All Rights Reserved." />
+
+    <!-- // meta tag -->
+    <link href="./css/bootstrap.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <link
+      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      referrerpolicy="no-referrer"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      footer {
+        margin-top: auto;
+      }
+      #rcorners {
+        border-radius: 0px;
+      }
+      #rcorners-height {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        padding: 0px;
+        height: 70px;
+      }
+      #anuj-footer-color {
+        color: rgb(197, 237, 238);
+      }
+      #card-text-color {
+        color: rgb(49, 97, 97);
+        font-weight: bold;
+      }
+      #btn-pad {
+        padding-top: 1rem;
+      }
+
+      #h1--color {
+        color: rgb(250, 243, 231);
+      }
+
+      #anuj--- {
+        display: inline;
+        font-size: 16.5px;
+        font-weight: 500;
+        font-family: sans-serif;
+        color: rgb(72, 63, 46);
+      }
+      #home-color {
+        color: rgb(72, 63, 46);
+      }
+
+      .user-container {
+        font-style: italic;
+        color: rgba(239, 235, 120, 0.922);
+        border-width: 1px;
+        border-color: blanchedalmond;
+        border-style: solid;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        padding-left: 0.5rem;
+        padding-right: 1rem;
+      }
+
+      .user-photo {
+        padding-left: 1px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+
+      #body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 10vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      #home-color {
+        color: rgb(72, 63, 46);
+      }
+      /* CSS for the overlay and processing message */
+      #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Semi-transparent black background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999; /* Ensure the overlay appears above other elements */
+        display: none; /* Initially hide the overlay */
+      }
+
+      #processing-message {
+        background-color: #f4efef;
+        color: rgb(235, 111, 111);
+        padding: 20px;
+        border-radius: 5px;
+      }
+      body {
+        /* text-align:center; */
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        min-height: 100vh;
+      }
+
+      .suggestion {
+        padding: 5px;
+        cursor: pointer;
+        color: black; /* Set the text color to black */
+      }
+      .center-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal-content {
+        background-color: rgb(247, 226, 209);
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+      }
+
+      .nav-item {
+        margin: 10px 0;
+      }
+
+      hr {
+        height: 1px; /* Adjust the height as needed */
+        width: 100%; /* Adjust the width as needed */
+        margin: 5px 0; /* Adjust the margin as needed */
+      }
+
+
+      .center-container {
+                text-align: center;
+              }
+
+              .center-button {
+                display: inline-flex;
+                align-items: center;
+                gap: 5px; /* Adjust the gap between the image and text */
+                padding: 10px; /* Adjust the padding as needed */
+                height: 35px; /* Adjust the button height as needed */
+              }
+
+              .login-icon {
+                width: 20px; /* Adjust the image width as needed */
+                height: 20px; /* Adjust the image height as needed */
+                vertical-align: middle;
+                filter: invert(100%); /* This will turn the image white */
+              }
+
+              .login-text {
+                flex: 1; /* This ensures the text takes up the remaining space */
+              }
+    </style>
+
+    <script src="login.js"></script>
+
+    <title>Default Form Sub. by PH</title>
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
+    <!---for fevicon-->
+  </head>
+  <body>
+    <!--//nav bar start-->
+
+    <nav class="navbar navbar-expand-lg nav--background py-1 pt-lg-1">
+      <div class="container-fluid">
+        <!-- <a class="navbar-brand  nav-link " href="#">Section Of Information Technology</a> -->
+        <a class="navbar-brand" href="https://www.anujrishu.live/">
+          <img
+            src="./img/nav.gif"
+            alt="Logo"
+            width="41"
+            height="39"
+            class="d-inline-block align-text-centre"
+          />
+          <!-- Information Technology -->
+          <h6 id="anuj---">Home</h6>
+        </a>
+        <button
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-bs-target="#navbarSupportedContent"
+          data-bs-toggle="collapse"
+          type="button"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li>
+              <a class="nav-link center-container" href="./about-us"
+                >About Us</a
+              >
+            </li>
+            <div class="center-container">
+              <button
+                type="button"
+                class="btn btn-primary center-button"
+                id="centerButton"
+              >
+                <span class="login-text">Login</span>
+                <img
+                  src="./img/login.png"
+                  alt="Login Icon"
+                  class="login-icon"
+                />
+              </button>
+            </div>
+
+           
+
+            <div class="modal" id="loginModal">
+              <div class="modal-content">
+                <ul class="nav">
+                  <li class="nav-item">
+                    <!-- <a href="./peer-head-login">Peer Head Login</a> -->
+                    <button
+                      type="button"
+                      class="btn btn-primary center-button"
+                      id="centerButton"
+                    >
+                      <a href="./peer-head-login"
+                        ><span class="login-text">Peer Head Login</span></a
+                      >
+
+                      <img
+                        src="./img/login.png"
+                        alt="Login Icon"
+                        class="login-icon"
+                      />
+                    </button>
+                  </li>
+                </ul>
+                <hr />
+                <!-- Horizontal line to divide -->
+                <ul class="nav">
+                  <li class="nav-item">
+                    <!-- <a href="./student-login">Student Login</a> -->
+
+                    <button
+                      type="button"
+                      class="btn btn-primary center-button"
+                      id="centerButton"
+                    >
+                      <a href="./student-login"
+                        ><span class="login-text">Student Login</span></a
+                      >
+
+                      <img
+                        src="./img/login.png"
+                        alt="Login Icon"
+                        class="login-icon"
+                      />
+                    </button>
+                  </li>
+                </ul>
+                <hr />
+                <!-- Horizontal line to divide -->
+                <ul class="nav">
+                  <li class="nav-item">
+                    <!-- <a href="./CrLogin">CR Login</a> -->
+                    <button
+                      type="button"
+                      class="btn btn-primary center-button"
+                      id="centerButton"
+                    >
+                      <a href="./CrLogin"
+                        ><span class="login-text">CR Login</span></a
+                      >
+
+                      <img
+                        src="./img/login.png"
+                        alt="Login Icon"
+                        class="login-icon"
+                      />
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const centerButton = document.getElementById("centerButton");
+        const loginModal = document.getElementById("loginModal");
+
+        centerButton.addEventListener("click", function () {
+          loginModal.style.display = "flex";
+        });
+
+        window.addEventListener("click", function (event) {
+          if (event.target === loginModal) {
+            loginModal.style.display = "none";
+          }
+        });
+      });
+    </script>
+    <!--//nav bar END-->
+
+    <!-- Registration details -->
+
+    <section class="common-section bg-color contact-section text-white">
+      <div class="container text-center fw-bold common-title1">
+        <!-- <h2 class="common-heading text-white ">Peer Head Default form Submission </h2> -->
+        <h2 class="common-heading text-white">
+          Assignment Submission by Peer Head
+        </h2>
+        <hr class="w-25 mx-auto" />
+      </div>
+      <div id="body">
+        <div id="usersContainer"></div>
+
+        <script>
+          var isLoggedIn = sessionStorage.getItem("isLoggedIn");
+
+          if (!isLoggedIn || isLoggedIn !== "true") {
+            window.location.href = "peer-head-login.html";
+          } else {
+            var users = [
+              JSON.parse(sessionStorage.getItem("user")),
+              // Add more users if needed
+            ];
+
+            var usersContainer = document.getElementById("usersContainer");
+            for (var i = 0; i < users.length; i++) {
+              var userContainer = document.createElement("div");
+              userContainer.classList.add("user-container");
+
+              var userPhoto = document.createElement("img");
+              userPhoto.classList.add("user-photo");
+              userPhoto.src = users[i].photoURL;
+              userPhoto.alt = "User Photo";
+
+              var username = document.createElement("div");
+              username.textContent = users[i].name;
+
+              var waveEmoji = document.createElement("span");
+              waveEmoji.textContent = "👋";
+
+              username.appendChild(waveEmoji);
+
+              userContainer.appendChild(userPhoto);
+              userContainer.appendChild(username);
+              usersContainer.appendChild(userContainer);
+            }
+          }
+        </script>
+      </div>
+      <div class="container">
+        <div class="form-section mx-auto">
+          <form
+            action="https://sheetdb.io/api/v1/yfs1ttrrkwo8k"
+            method="post"
+            id="sheetdb-form"
+          >
+            <div class="mb-3">
+              <div class="row"></div>
+            </div>
+
+            <div class="mb-3">
+              <label for="PeerHeadName" class="form-label"
+                >Peer Head Name</label
+              >
+              <select
+                class="form-select"
+                id="PeerHeadNameSelect"
+                name="data[Peer Head Name]"
+                required
+                onchange="populateOptions()"
+              >
+                <option value="" disabled selected>Choose Peer Head</option>
+                <option value="Sai Sujith .M">Sai Sujith .M</option>
+                <option value="B Seshasayee">B. Seshasayee</option>
+                <option value="K.SANJANA">K.SANJANA</option>
+                <option value="Anuj Tiwari">Anuj Tiwari</option>
+                <option value="Amanpreet Singh Chadha">
+                  Amanpreet Singh Chadha
+                </option>
+                <option value="Rishu Rajpoot">Rishu Rajpoot</option>
+                <option value="Shubham Kumar Singh">Shubham Kumar Singh</option>
+                <option value="Anvesha">Anvesha</option>
+                <option value="Poshak Arora">Poshak Arora</option>
+                <option value="R Surya Prakash">R Surya Prakash</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="registerNumber" class="form-label"
+                >Choose Student Register Number</label
+              >
+              <select
+                class="form-select"
+                id="registerNumber"
+                name="data[Student Register Number]"
+                required
+                aria-describedby="emailHelp"
+              >
+                <option value="" disabled selected>
+                  Select register number
+                </option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="StudentName" class="form-label">Student Name</label>
+              <select
+                class="form-select"
+                id="StudentName"
+                name="data[Student Name]"
+                required
+                aria-describedby="emailHelp"
+              >
+                <option value="" disabled selected>Select student name</option>
+              </select>
+            </div>
+
+            <script>
+              const peerNameOptions = [
+                {
+                  name: "Amanpreet Singh Chadha",
+                  registerNumbers: [
+                    "Select register number",
+                    "RA2211031010007",
+                    "RA2211031010002",
+                    "RA2211031010042",
+                    "RA2211031010041",
+                    "RA2211031010057",
+                    "RA2211031010006",
+                    "RA2211031010020",
+                  ],
+                  studentNames: [
+                    "Select student name",
+                    "AMANPREET SINGH CHADHA",
+                    "NEELESH ADHIKARI",
+                    "NAVYA PANDEY",
+                    "JAIDITYA YADAV",
+                    "MADHAV KASHYAP",
+                    "AKASH YADAV",
+                    "KRISH MAKHIJANI",
+                  ],
+                },
+                {
+                  name: "Rishu Rajpoot",
+                  registerNumbers: [
+                    "Select register number",
+                    "RA2211031010070",
+                    "RA2211031010071",
+                    "RA2211031010069",
+                    "RA2211031010021",
+                  ],
+                  studentNames: [
+                    "Select student name",
+                    "RISHU RAJPOOT",
+                    "MOHAMMAD AMAN",
+                    "ANSH BADAL",
+                    "NALIN SENGAR",
+                  ],
+                },
+                {
+                  name: "Shubham Kumar Singh",
+                  registerNumbers: [
+                    "Select register number",
+                    "RA2211031010018",
+                    "RA2211031010017",
+                    "RA2211031010008",
+                    "RA2211031010074",
+                  ],
+                  studentNames: [
+                    "Select student name",
+                    "SHUBHAM KUMAR SINGH",
+                    "SAURABH KUMAR qqqqqSINGH",
+                    "IRENA NIDHI",
+                    "SAMEER SHARMA",
+                  ],
+                },
+                {
+                  name: "Anuj Tiwari",
+                  registerNumbers: [
+                    "Select register number",
+                    "RA2211031010052",
+                    "RA2211031010061",
+                    "RA2211031010047",
+                    "RA2211031010004",
+                    "RA2211031010063",
+                    "RA2211031010072",
+                    "RA2211031010027",
+                  ],
+                  studentNames: [
+                    "Select student name",
+                    "Name of the Student",
+                    "ANUJ TIWARI",
+                    "MISBAH SUBHANI",
+                    "GEETALI MATTA",
+                    "BHUMI BHADORIA",
+                    "AYAN SAXENA",
+                    "ADITYA DUBEY",
+                    "CHIYA TIWARI",
+                  ],
+                },
+
+                {
+                  name: "B Seshasayee",
+                  registerNumbers: [
+                    "Select register number",
+                    "RA2211031010045",
+                    "RA2211031010024",
+                    "RA2211031010066",
+                    "RA2211031010012",
+                    "RA2211031010035",
+                    "RA2211031010011",
+                  ],
+                  studentNames: [
+                    "Select student name",
+                    "B SESHASAYEE",
+                    "SANKAR",
+                    "SANJAY",
+                    "ANAND BALAJI",
+                    "AVINESH",
+                    "GIRI SAI",
+                  ],
+                },
+                {
+                  name: "R Surya Prakash",
+                  registerNumbers: [
+                    "Select register number",
+                    "RA2211031010051",
+                    "RA2211031010067",
+                    "RA2211031010060",
+                    "RA2211031010025",
+                    "RA2211031010028",
+                    "RA2211031010029",
+                    "RA2211031010026",
+                  ],
+                  studentNames: [
+                    "Select student name",
+                    "R SURYA PRAKASH",
+                    "ALLEN ROMI",
+                    "ABHILASH",
+                    "ANANYA",
+                    "TAMANNA",
+                    "TANISHA",
+                    "RIYA",
+                  ],
+                },
+                {
+                  name: "K.SANJANA",
+                  registerNumbers: [
+                    "Select register number",
+                    "RA2211031010030",
+                    "RA2211031010005",
+                    "RA2211031010013",
+                    "RA2211031010040",
+                    "RA2211031010058",
+                    "RA2211031010056",
+                    "RA2211031010034",
+                  ],
+                  studentNames: [
+                    "Select student name",
+                    "K.SANJANA",
+                    "R.SOUNDARYA",
+                    "S.VISHNUPRIYA",
+                    "SARNIKA RAJ",
+                    "ILIN SUGIRTHA NIXON",
+                    "PREETHI",
+                    "RAKSHIT",
+                  ],
+                },
+                {
+                  name: "Poshak Arora",
+                  registerNumbers: [
+                    "Select register number",
+                    "RA2211031010075",
+                    "RA2211031010073",
+                    "RA2211031010043",
+                    "RA2211031010019",
+                    "RA2211031010031",
+                    "RA2211031010068",
+                  ],
+                  studentNames: [
+                    "Select student name",
+                    "POSHAK ARORA",
+                    "BHAVYA CHHABRA",
+                    "AYUSH BHARADWAJ",
+                    "TUSHAR CHOUDHARY",
+                    "SIDDHANT BHATTACHARYA",
+                    "LAKSHYA PANDYA",
+                  ],
+                },
+
+                {
+                  name: "Anvesha",
+                  registerNumbers: [
+                    "Select register number",
+                    "RA2211031010053",
+                    "RA2211031010054",
+                    "RA2211031010022",
+                    "RA2211031010046",
+                  ],
+                  studentNames: [
+                    "Select student name",
+                    "Anvesha",
+                    "AYAAN RAJAK",
+                    "Balajee",
+                    "NANDAN KUMAR",
+                  ],
+                },
+                {
+                  name: "Sai Sujith .M",
+                  registerNumbers: [
+                    "Select register number",
+                    "RA2211031010044",
+                    "RA2211031010055",
+                    "RA2211031010064",
+                    "RA2211031010015",
+                    "RA2211031010001",
+                    "RA2211031010009",
+                    "RA2211031010050",
+                  ],
+                  studentNames: [
+                    "Select student name",
+                    "Sai Sujith .M",
+                    "Mouleeshwaran S.P",
+                    "MANUSH C.P",
+                    "Dhiwakar.M",
+                    "SRIHARI V",
+                    "R SOWMYA",
+                    "BARATH KUMAR",
+                  ],
+                },
+              ];
+
+              const peerHeadNameSelect =
+                document.getElementById("PeerHeadNameSelect");
+              const registerNumberSelect =
+                document.getElementById("registerNumber");
+              const studentNameSelect = document.getElementById("StudentName");
+
+              function populateOptions() {
+                const selectedPeer = peerHeadNameSelect.value;
+                const matchingOption = peerNameOptions.find(
+                  (option) => option.name === selectedPeer
+                );
+
+                if (matchingOption) {
+                  clearOptions(registerNumberSelect);
+                  clearOptions(studentNameSelect);
+
+                  matchingOption.registerNumbers.forEach((registerNumber) => {
+                    addOption(registerNumberSelect, registerNumber);
+                  });
+
+                  matchingOption.studentNames.forEach((studentName) => {
+                    addOption(studentNameSelect, studentName);
+                  });
+
+                  registerNumberSelect.disabled = false;
+                  studentNameSelect.disabled = false;
+                }
+              }
+
+              // Utility function to add an option to a select element
+              function addOption(selectElement, value) {
+                const option = document.createElement("option");
+                option.value = value;
+                option.textContent = value;
+                selectElement.appendChild(option);
+              }
+
+              // Utility function to clear all options from a select element
+              function clearOptions(selectElement) {
+                while (selectElement.firstChild) {
+                  selectElement.removeChild(selectElement.firstChild);
+                }
+              }
+            </script>
+
+            <div class="mb-3">
+              <label for="Assignment Subject" class="form-label"
+                >Assignment Subject</label
+              >
+              <select
+                class="form-select"
+                id="Assignment Subject"
+                name="data[Assignment Subject]"
+                required
+              >
+                <option value="" disabled selected>Select a subject</option>
+                <option value="DSA">
+                  DSA (Data Structures and Algorithms)
+                </option>
+                <option value="APP">APP (Advance Programming Practice)</option>
+                <option value="COA">
+                  COA (Computer Organization and Architecture)
+                </option>
+                <option value="MATHS">MATHS (Mathematics)</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="Student Email id" class="form-label"
+                >Student Email id</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="StudentEmail"
+                required
+                name="data[Student Email id]"
+                placeholder="example@srmist.edu.in"
+                aria-describedby="emailHelp"
+              />
+              <div id="email-suggestion-box"></div>
+            </div>
+
+            <script>
+              const studentEmailInput = document.getElementById("StudentEmail");
+              const emailSuggestionBox = document.getElementById(
+                "email-suggestion-box"
+              );
+
+              // List of student email addresses provided
+              const studentEmails = [
+                "sv3702@srmist.edu.in",
+                "na2171@srmist.edu.in",
+                "bb2854@srmist.edu.in",
+                "rr0204@srmist.edu.in",
+                "ay7505@srmist.edu.in",
+                "ac3857@srmist.edu.in",
+                "in8581@srmist.edu.in",
+                "sr1961@srmist.edu.in",
+                "gs5841@srmist.edu.in",
+                "ab0750@srmist.edu.in",
+                "vs2868@srmist.edu.in",
+                "dm6756@srmist.edu.in",
+                "ss4707@srmist.edu.in",
+                "ss4446@srmist.edu.in",
+                "ss4422@srmist.edu.in",
+                "tc8842@srmist.edu.in",
+                "km5652@srmist.edu.in",
+                "ns7882@srmist.edu.in",
+                "bs1145@srmist.edu.in",
+                "sm3906@srmist.edu.in",
+                "as2261@srmist.edu.in",
+                "rr9126@srmist.edu.in",
+                "ct6222@srmist.edu.in",
+                "td5647@srmist.edu.in",
+                "tj6659@srmist.edu.in",
+                "sk2429@srmist.edu.in",
+                "sb2539@srmist.edu.in",
+                "rv8961@srmist.edu.in",
+                "am2890@srmist.edu.in",
+                "sd0220@srmist.edu.in",
+                "jy1931@srmist.edu.in",
+                "np4833@srmist.edu.in",
+                "ab8979@srmist.edu.in",
+                "sm8898@srmist.edu.in",
+                "sb7762@srmist.edu.in",
+                "nk7210@srmist.edu.in",
+                "gm7761@srmist.edu.in",
+                "bn4755@srmist.edu.in",
+                "sr9071@srmist.edu.in",
+                "at6272@srmist.edu.in",
+                "aa2598@srmist.edu.in",
+                "ar5818@srmist.edu.in",
+                "mp2739@srmist.edu.in",
+                "pm2713@srmist.edu.in",
+                "mk3172@srmist.edu.in",
+                "in5429@srmist.edu.in",
+                "ar7875@srmist.edu.in",
+                "ms7411@srmist.edu.in",
+                "as9621@srmist.edu.in",
+                "mc7885@srmist.edu.in",
+                "ss6836@srmist.edu.in",
+                "ar9320@srmist.edu.in",
+                "lp9237@srmist.edu.in",
+                "ab9451@srmist.edu.in",
+                "rr3681@srmist.edu.in",
+                "ma0167@srmist.edu.in",
+                "ss5942@srmist.edu.in",
+                "ad0610@srmist.edu.in",
+                "bc3721@srmist.edu.in",
+                "pa1054@srmist.edu.in",
+              ];
+
+              studentEmailInput.addEventListener("input", () => {
+                const userInput = studentEmailInput.value.toLowerCase();
+                const suggestions = studentEmails.filter((email) =>
+                  email.toLowerCase().startsWith(userInput)
+                );
+
+                emailSuggestionBox.innerHTML = ""; // Clear previous suggestions
+
+                suggestions.forEach((suggestion) => {
+                  const suggestionItem = document.createElement("div");
+                  suggestionItem.classList.add("suggestion");
+                  suggestionItem.textContent = suggestion;
+
+                  suggestionItem.addEventListener("click", () => {
+                    studentEmailInput.value = suggestion;
+                    emailSuggestionBox.innerHTML = ""; // Clear suggestions after selection
+                  });
+
+                  emailSuggestionBox.appendChild(suggestionItem);
+                });
+              });
+
+              // Hide suggestions when clicking outside the input and suggestion box
+              document.addEventListener("click", (event) => {
+                if (
+                  event.target !== studentEmailInput &&
+                  event.target !== emailSuggestionBox
+                ) {
+                  emailSuggestionBox.innerHTML = "";
+                }
+              });
+            </script>
+
+            <!-- //suggestion -->
+            <div class="mb-3">
+              <label for="Description" class="form-label">Description</label>
+              <input
+                type="text"
+                class="form-control"
+                id="Description"
+                name="data[Description]"
+                placeholder="description here"
+                aria-describedby="emailHelp"
+              />
+              <p>Optional</p>
+              <p></p>
+            </div>
+
+            <br />
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <div id="overlay">
+            <div id="processing-message">Submitting Please Wait...</div>
+          </div>
+
+          <script>
+            var form = document.getElementById("sheetdb-form");
+            var overlay = document.getElementById("overlay");
+
+            form.addEventListener("submit", (e) => {
+              e.preventDefault();
+
+              overlay.style.display = "flex";
+
+              fetch(form.action, {
+                method: "POST",
+                body: new FormData(document.getElementById("sheetdb-form")),
+              }).then((Response) => {
+                overlay.style.display = "none"; // Hide the overlay
+                alert("Assignment Submitted Successfully");
+                // Redirect to the external page after displaying the alert
+                // window.location.href = "https://www.example.com/external-page";
+              });
+            });
+          </script>
+        </div>
+      </div>
+
+      <script>
+        var isLoggedIn = sessionStorage.getItem("isLoggedIn");
+
+        if (!isLoggedIn || isLoggedIn !== "true") {
+          window.location.href = "peer-head-login.html";
+        }
+      </script>
+    </section>
+    <footer>
+      <div
+        id="rcorners"
+        class="card text-center main-footer-section text-white"
+      >
+        <div id="rcorners-height" class="card-body">
+          <h5 class="card-title-2 text-white">
+            Copyright &copy 2023 All right reserved
+          </h5>
+          <p class="card-text-2 text-white anuj--credit">
+            Crafted with ❤️ by
+            <a
+              id="anuj-footer-color"
+              href="https://www.linkedin.com/in/anuj-rishu"
+              target="_blank"
+              >Anuj Rishu Tiwari</a
+            >
+            (U1 CSE-IT)
+          </p>
+        </div>
+        <div class="card-footer text-body-secondary">
+          <h6 class="text-white card-text-3"><u>Version-- ART-2.0</u></h6>
+        </div>
+      </div>
+    </footer>
+
+    <!--footer sectoin ends -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
+    </script>
+  </body>
+</html>
