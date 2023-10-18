@@ -1,7 +1,5 @@
 
 ## 🚀 About Project
-I'm a full stack developer...
-
 
 # Class-Website
 Dynamic class website
