@@ -22,14 +22,7 @@ I have developed a website for my class, aimed at assisting students with their 
 This project is used by the U1 section CSE-IT:
 
 
-
-# Logo
-![Logo](https://www.anujrishu.live/img/nav.gif)
-
-
 ## Home Page
-
-![App Screenshot]([https://via.placeholder.com/468x300?text=App+Screenshot+Here](https://github.com/anuj-rishu/Class-Website-/assets/115218200/3e1bd0e9-5486-4bde-89e9-8fea920e9fa5))
 <img width="1426" alt="Screenshot 2023-10-18 at 8 06 35 PM" src="https://github.com/anuj-rishu/Class-Website-/assets/115218200/3e1bd0e9-5486-4bde-89e9-8fea920e9fa5">
 
 
